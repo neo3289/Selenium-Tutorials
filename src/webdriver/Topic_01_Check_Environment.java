@@ -12,14 +12,29 @@ import org.testng.annotations.*;
 public class Topic_01_Check_Environment {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
+	String osName = System.getProperty("OS.name");
+	
 
 	@BeforeClass
 	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.get("https://www.facebook.com/");
+		
+		// chua tai driver cho MAC, CODE SAN THOI
+		if (osName.contains("Mac OS")){
+			
+			System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver");
+			driver = new FirefoxDriver();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().window().maximize();
+			driver.get("https://www.facebook.com/");
+		} else {
+
+			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+			driver = new FirefoxDriver();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().window().maximize();
+			driver.get("https://www.facebook.com/");
+		}
+		
 		
 		System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver.exe");
 		driver = new ChromeDriver();

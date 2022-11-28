@@ -6,13 +6,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class Topic_01_Check_Environment {
 	WebDriver driver;
+	Actions action;
 	String projectPath = System.getProperty("user.dir");
-	String osName = System.getProperty("OS.name");
+	String osName = System.getProperty("os.name");
+	WebDriverWait explicitWait;
 	
 
 	@BeforeClass

@@ -28,8 +28,8 @@ public class Topic_09_Custom_Dropdown {
 	// tim thay roi thi ko can cho het timout
 	// Neu cho tiep mà đặt được điều kiện thấy element thì ko cần chờ hết timeout
 	// nếu chờ tiếp mà hết timout thì đánh fail
-
-	// hàm sleep bên dưới là wait fix cứng thời gian.
+	// hàm sleep bên dưới là wait fix cứng thời gian
+	
 	@BeforeClass
 	public void beforeClass() {
 

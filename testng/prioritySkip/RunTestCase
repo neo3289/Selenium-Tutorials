@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+
+<groups>
+	<run>
+		  <include name="Payment_Address" />
+		  <include name="payment" />
+		  <exclude name="Users" />
+	</run>
+</groups>
+
+  <test name="Test xem cach chay">
+    <classes>
+      <class name="annotation.Annotation03"/>
+      	 <methods>
+               <include name="Login01" />
+                            
+                  <include name="Login03" />
+                  
+                 
+                           
+                  <exclude name="Login02" />
+            </methods>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+<!-- file xml SUITE khai báo mún customise chạy gì trc sau -->
+
+<!--   <exclude name="Login02" /> -->
+
+<!--      <include name="Login03" /> -->

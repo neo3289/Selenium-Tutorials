@@ -1,0 +1,86 @@
+* Find the first {@link WebElement} using the given method.
+   * This method is affected by the 'implicit wait' times in force at the time of execution.
+   * The findElement(..) invocation will return a matching row, or try again repeatedly until
+   * the configured timeout is reached.
+   *
+   * findElement should not be used to look for non-present elements, use {@link #findElements(By)}
+   * and assert zero length response instead.
+
+
+ Find the first {@link WebElement} using the given method.
+Đào Minh Đảm, Today at 7:58 PM
+Trả về 1 element - element đầu tiên nếu có nhiều hơn 1
+
+
+This method is affected by the 'implicit wait' times in force at the time of execution.
+Đào Minh Đảm, Today at 7:58 PM
+Bị ảnh hưởng bởi implicit wait
+
+
+invocation will return a matching row
+Đào Minh Đảm, Today at 7:58 PM
+Nếu tìm thấy thì trả về
+
+
+or try again repeatedly until
+   * the configured timeout is reached.
+Đào Minh Đảm, Today at 7:58 PM
+Ko tìm thấy thì sẽ chờ cho hết timeout được set bởi implicit wait
+
+Nửa giây tìm lại 1 lần
+
+
+findElement should not be used to look for non-present elements
+Đào Minh Đảm, Today at 7:58 PM
+Ko nên sử dụng để tìm 1 element ko có trong HTML/ DOM
+
+
+use {@link #findElements(By)}
+   * and assert zero length response instead.
+Đào Minh Đảm, Today at 7:58 PM
+Nên dùng findElements để tìm element dạng non-present
+
+size() ==0
+
+   * Find all elements within the current page using the given mechanism.
+   * This method is affected by the 'implicit wait' times in force at the time of execution. When
+   * implicitly waiting, this method will return as soon as there are more than 0 items in the
+   * found collection, or will return an empty list if the timeout is reached.
+
+
+ * Find all elements within the current page using the given mechanism.
+Đào Minh Đảm, Today at 8:03 PM
+Tìm tất cả element trong page hiện tại
+
+
+ This method is affected by the 'implicit wait' times in force at the time of execution
+Đào Minh Đảm, Today at 8:03 PM
+Bị ảnh hưởng bởi implicit wait
+
+
+ this method will return as soon as there are more than 0 items in the
+   * found collection
+Đào Minh Đảm, Today at 8:03 PM
+Nếu như tìm thấy thì sẽ trả về nhiều hơn 0 item
+
+
+or will return an empty list 
+Đào Minh Đảm, Today at 8:03 PM
+Ko tìm thấy sẽ trả về list rỗng (0 item)
+
+
+ if the timeout is reached
+Đào Minh Đảm, Today at 8:03 PM
+Ko tìm thấy thì sẽ chờ cho hết timeout được set bởi implicit wait
+Nửa giây tìm lại 1 lần
+
+ * Specifies the amount of time the driver should wait when searching for an element if it is
+     * not immediately present.
+     * <p>
+     * When searching for a single element, the driver should poll the page until the element has
+     * been found, or this timeout expires before throwing a {@link NoSuchElementException}. When
+     * searching for multiple elements, the driver should poll the page until at least one element
+     * has been found or this timeout has expired.
+     * <p>
+     * Increasing the implicit wait timeout should be used judiciously as it will have an adverse
+     * effect on test run time, especially when used with slower location strategies like XPath.

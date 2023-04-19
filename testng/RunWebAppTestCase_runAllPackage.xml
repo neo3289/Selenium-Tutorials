@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Tiki - Web automation UI" parallel="false">
+<!-- gắn Listenter vào tất cả các test trong file này-->
+<listeners>
+	<listener class-name="listener.ReportNGListener"/>
+</listeners>
+
+	<test name="Run on firefox browser">
+		<parameter name="browserName" value="s20" />
+		<parameter name="browserVer" value="123456" />
+		<parameter name="platform" value="windows" />
+	
+		<!-- chay all class in package:-->
+		<packages>
+			<package name="webApp"/>
+		</packages>
+	</test>
+		<test name="Run on Chrome browser">
+		<parameter name="browserName" value="s20" />
+		<parameter name="browserVer" value="123456" />
+		<parameter name="platform" value="windows" />
+		<classes>
+			<class name="webApp.Customer" />
+		</classes>
+	</test>
+	
+		
+
+</suite> <!-- Suite -->

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Parameter" parallel="tests" thread-count="3">
+<parameter name="environment" value ="Live"/>
+
+	<test name="Run on firefox browser">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="dataProvider.Login" />
+			<class name="parameter.MultipleBrowser" />
+			<class name="parameter.MultipleEnvironment" />
+			
+		</classes>
+	</test>
+
+	<test name="Run on chrome browser">
+		<!---giả sử không set biến parameter name="browser" value="chrome" để chạy trường hợp optional nên comment tạm lệnh dòng 4 và dòng này nha/-->
+		<classes>
+			<class name="parameter.MultipleEnvironment" />
+			<class name="dataProvider.Login" />
+			
+		
+		</classes>
+	</test>
+
+	<test name="Run on Edge browser">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="parameter.MultipleEnvironment" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
+
+<!-- DOC:
+parallel="classes": chạy các class cùng 1 lúc
+parallel="tests": run test cùng 1 lúc
+threadcount: số lươngluồng có thể chạy song song cùng 1 lúc là bao nhiêu
+Chú ý nếu muốn chạy parallel của Test thì thay thế suite name="Parameter" parallel="xxx" 
+khi đó Trong cùng 1 class thì nó sẽ chạy theo thứ tự
+ -->

@@ -80,6 +80,7 @@ public class Topic_12_Alert {
 		// driver.switchTo().alert();
 		// alert = driver.switchTo().alert();
 		// 2. can wait truoc, khi nao xuat hien moi switch va tuong tac:
+		// wait và switch qua luôn
 		alert = explicitWait.until(ExpectedConditions.alertIsPresent());
 
 		Assert.assertEquals(alert.getText(), "I am a JS Confirm");

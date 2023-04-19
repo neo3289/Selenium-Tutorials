@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Tiki - Automation testing" parallel="false">
+
+<!--khi chạy nó sẽ chạy 3 suite cùng 1 lần -->
+<suite-files>
+	<suite-file path="RunAPITestCase.xml" />
+	<suite-file path="RunMobileAppTestCase.xml" />
+	<suite-file path="RunWebAppTestCase.xml" />
+	
+
+</suite-files>
+
+	
+
+</suite> <!-- Suite -->

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Tiki - Web automation mobile app" parallel="false">
+
+
+	<test name="Run on Samsung Galaxy S20">
+		<parameter name="device" value="s20"/>
+		<parameter name="uuid" value="123456"/>
+		<parameter name="platform" value="android"/>
+			<classes>
+				<class name="mobileApp.Customer" />
+			</classes>
+	</test>
+	
+	<test name="Run on Iphone 12">
+		<parameter name="device" value="iPhone12"/>
+		<parameter name="uuid" value="123456"/>
+		<parameter name="platform" value="ios"/>
+			<classes>
+				<class name="mobileApp.Customer" />
+			</classes>
+	</test>
+
+
+</suite> <!-- Suite -->

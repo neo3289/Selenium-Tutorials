@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Tiki - Web automation UI" parallel="false">
+	<test name="Run on firefox browser">
+		<parameter name="browserName" value="s20" />
+		<parameter name="browserVer" value="123456" />
+		<parameter name="platform" value="windows" />
+		<classes>
+			<class name="webApp.Customer" />
+		</classes>
+	
+	</test>
+		<test name="Run on Chrome browser">
+		<parameter name="browserName" value="s20" />
+		<parameter name="browserVer" value="123456" />
+		<parameter name="platform" value="windows" />
+		<classes>
+			<class name="webApp.Customer" />
+		</classes>
+	</test>
+	
+	
+
+</suite> <!-- Suite -->

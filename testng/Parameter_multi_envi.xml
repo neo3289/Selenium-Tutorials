@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Parameter">
+<parameter name="environment" value ="Live"/>
+
+	<test name="Run on firefox browser">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="parameter.MultipleEnvironment" />
+		</classes>
+	</test>
+
+	<test name="Run on chrome browser">
+		<!---giả sử không set biến parameter name="browser" value="chrome" để chạy trường hợp optional nên comment tạm lệnh dòng 4 và dòng này nha/-->
+		<classes>
+			<class name="parameter.MultipleEnvironment" />
+		</classes>
+	</test>
+
+	<test name="Run on Edge browser">
+		<parameter name="browser" value="edge" />
+		<classes>
+			<class name="parameter.MultipleEnvironment" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
